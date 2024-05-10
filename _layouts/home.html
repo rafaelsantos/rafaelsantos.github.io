@@ -178,12 +178,22 @@
       </nav>
     </header>
 
-    <!-- Begin page content -->
     <main class="flex-shrink-0">
       <div class="container">
-        <h1 class="mt-5">Sticky footer with fixed navbar</h1>
-        <p class="lead">Pin a footer to the bottom of the viewport in desktop browsers with this custom HTML and CSS. A fixed navbar has been added with <code class="small">padding-top: 60px;</code> on the <code class="small">main &gt; .container</code>.</p>
-        <p>Back to <a href="../examples/sticky-footer/">the default sticky footer</a> minus the navbar.</p>
+        <h1 class="mt-5">Meus Projetos</h1>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+          {% for repo in site.github.public_repositories %}
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">{{ repo.name }}</h5>
+                <p class="card-text">{{ repo.description }}</p>
+                <a href="{{ repo.html_url }}" class="btn btn-primary">Ver Repositório</a>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
       </div>
     </main>
 
