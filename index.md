@@ -1,9 +1,11 @@
 ---
 layout: page
-title: Página Inicial
+title: Lista de Projetos
 ---
 
-Bem-vindo ao meu site!
+# Lista de Projetos
+
+Abaixo estão os meus projetos no GitHub:
 
 {% for repo in site.github.public_repositories %}
 - [{{ repo.name }}]({{ repo.html_url }})
