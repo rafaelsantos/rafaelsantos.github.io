@@ -1,1 +1,6 @@
 title: Rafael Santos - GitHub Pages
+
+pagination:
+  enabled: true
+  per_page: 10
+  permalink: '/page/:num/'
