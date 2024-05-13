@@ -1,4 +1,4 @@
 title: Rafael Santos - GitHub Pages
 
-paginate: 5
-paginate_path: "/home:num/"
+paginate: 10
+paginate_path: "/page:num/"
