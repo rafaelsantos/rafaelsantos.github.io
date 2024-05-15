@@ -181,13 +181,15 @@
     </header>
     
     <main class="flex-shrink-0">
-      <div class="container" id="cardsContainer">
-        <!-- Cards serão carregados aqui -->
+      <div class="container">
+        <h1 class="mt-5">Meus Projetos</h1>
+        <div id="projectsContainer" class="row row-cols-1 row-cols-md-3 g-4"></div>
+  
+        <!-- Pagination -->
+        <nav id="pagination" aria-label="Page navigation example">
+          <ul class="pagination justify-content-center"></ul>
+        </nav>
       </div>
-    
-      <nav aria-label="Page navigation example" id="paginationContainer">
-        <!-- Links de paginação serão carregados aqui -->
-      </nav>
     </main>
 
     <footer class="footer mt-auto py-3 bg-body-tertiary">
