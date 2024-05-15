@@ -12,6 +12,7 @@ function loadProjects(page) {
 
   // Construir a URL com parâmetros de paginação
   const url = `${apiUrl}?page=${page}&per_page=${itemsPerPage}`;
+  console.log(url)
 
   // Fazer requisição para a API do GitHub
   fetch(url)
