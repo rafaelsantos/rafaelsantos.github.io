@@ -46,12 +46,15 @@ document.addEventListener("DOMContentLoaded", function() {
     // Função para atualizar os links de paginação
     function updatePagination() {
       const totalPages = Math.ceil(repositoriesData.length / itemsPerPage);
-      let paginationHTML = "";
+      let paginationHTML = `<ul class="pagination">`;
+    
       for (let i = 1; i <= totalPages; i++) {
         paginationHTML += `<li class="page-item ${i === currentPage ? 'active' : ''}">
                               <a class="page-link" href="#" onclick="loadPage(${i})">${i}</a>
                             </li>`;
       }
+    
+      paginationHTML += `</ul>`;
       paginationContainer.innerHTML = paginationHTML;
     }
   
