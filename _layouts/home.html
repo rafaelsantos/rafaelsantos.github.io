@@ -99,6 +99,17 @@
                 <h5 class="card-title">{{ repo.name }}</h5>
                 <p class="card-text">{{ repo.description }}</p>
                 <a href="{{ repo.html_url }}" class="btn btn-primary">Ver Repositório</a>
+                <!-- Aqui começa a exibição das linguagens -->
+                <div class="mt-3">
+                  {% if repo.languages %}
+                    <h6>Linguagens:</h6>
+                    {% for language in repo.languages %}
+                      <span class="badge bg-secondary">{{ language }}</span>
+                    {% endfor %}
+                  {% else %}
+                    <p>Sem linguagens especificadas</p>
+                  {% endif %}
+                </div>
               </div>
             </div>
           </div>
