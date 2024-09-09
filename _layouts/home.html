@@ -99,9 +99,7 @@
                 <h5 class="card-title">{{ repo.name }}</h5>
                 <p class="card-text">{{ repo.description }}</p>
                 <a href="{{ repo.html_url }}" class="btn btn-primary">Ver Repositório</a>
-                <div class="languages mt-2" id="languages-{{ repo.name | slugify }}">
-                  Carregando linguagens...
-                </div>
+                <p class="card-text">{{ repo.language }}</p>
               </div>
             </div>
           </div>
@@ -116,22 +114,5 @@
       </div>
     </footer>
     <script src="/assets/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script>
-      fetch('{{ repo.languages_url }}')
-        .then(response => response.json())
-        .then(data => {
-          const languages = Object.keys(data);
-          const languagesContainer = document.getElementById('languages-{{ repo.name | slugify }}');
-          if (languages.length > 0) {
-            languagesContainer.innerHTML = languages.map(lang => `<span class="badge bg-secondary">${lang}</span>`).join(' ');
-          } else {
-            languagesContainer.innerHTML = "Sem linguagem especificada";
-          }
-        })
-        .catch(error => {
-          document.getElementById('languages-{{ repo.name | slugify }}').innerHTML = "Erro ao carregar linguagens";
-        });
-    </script>
   </body>
 </html>
