@@ -99,7 +99,9 @@
                 <h5 class="card-title">{{ repo.name }}</h5>
                 <p class="card-text">{{ repo.description }}</p>
                 <a href="{{ repo.html_url }}" class="btn btn-primary">Ver Repositório</a>
-                <span class="badge bg-secondary">{{ repo.language }}</span>
+                <div class="mt-3">
+                  <span class="badge bg-success">{{ repo.language }}</span>
+                </div>
               </div>
             </div>
           </div>
