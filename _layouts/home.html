@@ -96,7 +96,7 @@
     <main class="flex-shrink-0">
       <div class="container">
         <h1 class="mt-5 text-center">Projects</h1>
-        <h4 class="mt-2 text-center">Take a look at what I've been up to...</h4>
+        <h4 class="mt-2 mb-5 text-center">Take a look at what I've been up to...</h4>
         <div class="row row-cols-1 row-cols-md-3 g-4">
           {% assign projects_per_page = 10 %}
           {% assign projects_count = site.github.public_repositories.size %}
@@ -109,7 +109,7 @@
               <div class="card-body">
                 <h5 class="card-title">{{ repo.name }}</h5>
                 <p class="card-text">{{ repo.description }}</p>
-                <a href="{{ repo.html_url }}" class="btn btn-primary">Ver Repositório</a>
+                <a href="{{ repo.html_url }}" class="btn btn-primary">Repository</a>
                 <div class="mt-3">
                   <span class="badge bg-success">{{ repo.language }}</span>
                 </div>
